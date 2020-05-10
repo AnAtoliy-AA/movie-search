@@ -1,0 +1,78 @@
+import KeyboardKey from './keyboard-key';
+
+function createVirtualKeyboardKeys() {
+  const keyArr = [
+    new KeyboardKey('`', '~', 'ё', 'ё', 192, 1, 1, 40, '~'),
+    new KeyboardKey('1', '1', '1', '1', 49, 1, 2, 40, '!', '!'),
+    new KeyboardKey('2', '2', '2', '2', 50, 1, 3, 40, '@', '@'),
+    new KeyboardKey('3', '3', '3', '3', 51, 1, 4, 40, '#', '#'),
+    new KeyboardKey('4', '4', '4', '4', 52, 1, 5, 40, '$', '$'),
+    new KeyboardKey('5', '5', '5', '5', 53, 1, 6, 40, '%', '%'),
+    new KeyboardKey('6', '6', '6', '6', 54, 1, 7, 40, '^', '^'),
+    new KeyboardKey('7', '7', '7', '7', 55, 1, 8, 40, '&', '&'),
+    new KeyboardKey('8', '8', '8', '8', 56, 1, 9, 40, '*', '*'),
+    new KeyboardKey('9', '9', '9', '9', 57, 1, 10, 40, '(', '('),
+    new KeyboardKey('0', '0', '0', '0', 48, 1, 11, 40, ')', ')'),
+    new KeyboardKey('-', '-', '-', '-', 189, 1, 12, 40, '_', '_'),
+    new KeyboardKey('=', '=', '=', '=', 187, 1, 13, 40, '+', '+'),
+    new KeyboardKey('backspace', 'Backspace', 'backspace', 'Backspace', 8, 1, 14, 110),
+
+
+    new KeyboardKey('tab', 'Tab', 'tab', 'Tab', 9, 2, 1, 60),
+    new KeyboardKey('q', 'q', 'й', 'й', 81, 2, 2, 40),
+    new KeyboardKey('w', 'w', 'ц', 'ц', 87, 2, 3, 40),
+    new KeyboardKey('e', 'e', 'у', 'у', 69, 2, 4, 40),
+    new KeyboardKey('r', 'r', 'к', 'к', 82, 2, 5, 40),
+    new KeyboardKey('t', 't', 'е', 'е', 84, 2, 6, 40),
+    new KeyboardKey('y', 'y', 'н', 'н', 89, 2, 7, 40),
+    new KeyboardKey('u', 'u', 'г', 'г', 85, 2, 8, 40),
+    new KeyboardKey('i', 'i', 'ш', 'ш', 73, 2, 9, 40),
+    new KeyboardKey('o', 'o', 'щ', 'щ', 79, 2, 10, 40),
+    new KeyboardKey('p', 'p', 'з', 'з', 80, 2, 11, 40),
+    new KeyboardKey('[', '[', 'х', 'х', 219, 2, 12, 40),
+    new KeyboardKey(']', ']', 'ъ', 'ъ', 221, 2, 13, 40),
+    new KeyboardKey('\\', '\\', '\\', '\\', 220, 2, 14, 40, '|', '/'),
+    new KeyboardKey('del', 'DEL', 'del', 'DEL', 46, 2, 15, 40),
+
+    new KeyboardKey('capsLock', 'Caps Lock', 'capsLock', 'Caps Lock', 20, 3, 1, 90),
+    new KeyboardKey('a', 'a', 'ф', 'ф', 65, 3, 2, 40),
+    new KeyboardKey('s', 's', 'ы', 'ы', 83, 3, 3, 40),
+    new KeyboardKey('d', 'd', 'в', 'в', 68, 3, 4, 40),
+    new KeyboardKey('f', 'f', 'а', 'а', 70, 3, 5, 40),
+    new KeyboardKey('g', 'g', 'п', 'п', 71, 3, 6, 40),
+    new KeyboardKey('h', 'h', 'р', 'р', 72, 3, 7, 40),
+    new KeyboardKey('j', 'j', 'о', 'о', 74, 3, 8, 40),
+    new KeyboardKey('k', 'k', 'л', 'л', 75, 3, 9, 40),
+    new KeyboardKey('l', 'l', 'д', 'д', 76, 3, 10, 40),
+    new KeyboardKey(';', ';', 'ж', 'ж', 186, 3, 11, 40),
+    new KeyboardKey('\'', '\'', 'э', 'э', 222, 3, 12, 40),
+    new KeyboardKey('enter', 'Enter', 'enter', 'Enter', 13, 3, 13, 105),
+
+    new KeyboardKey('', 'Shift', '', 'Shift', 16, 4, 1, 110, null, null, 1),
+    new KeyboardKey('z', 'z', 'я', 'я', 90, 4, 2, 40),
+    new KeyboardKey('x', 'x', 'ч', 'ч', 88, 4, 3, 40),
+    new KeyboardKey('c', 'c', 'с', 'с', 67, 4, 4, 40),
+    new KeyboardKey('v', 'v', 'м', 'м', 86, 4, 5, 40),
+    new KeyboardKey('b', 'b', 'и', 'и', 66, 4, 6, 40),
+    new KeyboardKey('n', 'n', 'т', 'т', 78, 4, 7, 40),
+    new KeyboardKey('m', 'm', 'ь', 'ь', 77, 4, 8, 40),
+    new KeyboardKey(',', ',', 'б', 'б', 188, 4, 9, 40, '<'),
+    new KeyboardKey('.', '.', 'ю', 'ю', 190, 4, 10, 40, '>'),
+    new KeyboardKey('/', '/', '.', '.', 191, 4, 11, 40, '?', ','),
+    new KeyboardKey('', '&uarr;', '', '&uarr;', 38, 4, 12, 40),
+    new KeyboardKey('', 'Shift', '', 'Shift', 16, 4, 13, 85, null, null, 2),
+
+    new KeyboardKey('', 'Ctrl', '', 'Ctrl', 17, 5, 1, 40, null, null, 1),
+    new KeyboardKey('lang', 'RUS', 'lang', 'ENG', 91, 5, 2, 40),
+    new KeyboardKey('', 'Alt', '', 'Alt', 18, 5, 3, 40, null, null, 1),
+    new KeyboardKey('space', 'Space', 'space', 'Space', 32, 5, 4, 345),
+    new KeyboardKey('', 'Alt', '', 'Alt', 18, 5, 5, 40, null, null, 2),
+    new KeyboardKey('leftArrow', '&larr;', 'leftArrow', '&larr;', 37, 5, 7, 40),
+    new KeyboardKey('', '&darr;', '', '&darr;', 40, 5, 8, 40),
+    new KeyboardKey('rightArrow', '&rarr;', 'rightArrow', '&rarr;', 39, 5, 9, 40),
+    new KeyboardKey('', 'Ctrl', '', 'Ctrl', 17, 5, 6, 40, null, null, 2),
+  ];
+  return keyArr;
+}
+
+export default createVirtualKeyboardKeys;
