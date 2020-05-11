@@ -2,7 +2,7 @@ import Card from './card';
 import initializeSwiper from './swiper';
 
 const API_KEYS = {
-  IMDB: '1abc55ac',
+  IMDB: '2a051ccf',
   YANDEX: 'trnsl.1.1.20200508T093226Z.509bbc3c7b82dcc9.e20b1eaa78b0260dcd915efcf0b967ccb668ccfd',
 };
 

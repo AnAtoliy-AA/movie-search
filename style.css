@@ -84,6 +84,7 @@ width: 90%;
   background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
+  background-size: cover;
 }
 
 .loader {  
