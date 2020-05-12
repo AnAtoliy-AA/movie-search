@@ -102,7 +102,7 @@ class CardContainer {
   }
 
   async getfilmDetailsData(imdbID) {
-    const imdbIDUrl = `http://www.omdbapi.com/?i=${imdbID}&page=1&apikey=${API_KEYS.IMDB}`;
+    const imdbIDUrl = `http://www.omdbapi.com/?i=${imdbID}&page=${this.activePageNumber}&apikey=${API_KEYS.IMDB}`;
     const apiResponse = await fetch(imdbIDUrl);
 
     return apiResponse.json();
